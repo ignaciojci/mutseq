@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mutseq"
+version = "0.1.0"
+description = "A CLI tool for smart DNA sequence mutation with anti-slippage."
+dependencies = [
+    "biopython>=1.80",
+    "requests>=2.28.0",
+]
+requires-python = ">=3.8"
+
+[project.scripts]
+mutseq = "mutseq.main:run_cli"  # This creates the 'mutseq' command
